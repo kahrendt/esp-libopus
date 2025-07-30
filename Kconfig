@@ -1,0 +1,18 @@
+menu "Opus Audio Codec"
+
+    config OPUS_COMPONENT
+        bool
+        default y
+        select FREERTOS_TLSP_DELETION_CALLBACKS
+
+    config OPUS_FLOATING_POINT
+        bool "Enable floating-point implementation"
+        default n
+        depends on IDF_TARGET_ESP32S3
+        help
+            Enable floating-point implementation instead of fixed-point.
+            This option is only available on ESP32-S3 which has hardware FPU.
+            Floating-point may provide better audio quality but uses more
+            memory and may be slower on processors without FPU.
+
+endmenu
