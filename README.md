@@ -1,3 +1,5 @@
+# Please use [microOpus](https://github.com/esphome-libs/micro-opus) going forward!
+
 # esp-libopus - ESP-IDF Opus Component
 
 This component provides the Opus audio codec library as an ESP-IDF component, making it easy to integrate high-quality audio compression into ESP32 projects.
